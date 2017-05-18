@@ -3626,7 +3626,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 				}, function (url)
 				{
 					self.httpServerUrl = url;
-					self.fetchLocalFileViaCordovaAsText("files/data.js", function (str)
+					self.fetchLocalFileViaCordovaAsText("/static/files/data.js", function (str)
 					{
 						self.loadProject(JSON.parse(str));
 					}, function (err)
@@ -3640,7 +3640,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 			}
 			else
 			{
-				this.fetchLocalFileViaCordovaAsText("files/data.js", function (str)
+				this.fetchLocalFileViaCordovaAsText("/static/files/data.js", function (str)
 				{
 					self.loadProject(JSON.parse(str));
 				}, function (err)
@@ -3655,7 +3655,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 			xhr = new ActiveXObject("Microsoft.XMLHTTP");
 		else
 			xhr = new XMLHttpRequest();
-		var datajs_filename = "files/data.js";
+		var datajs_filename = "/static/files/data.js";
 		if (this.isWindows8App || this.isWindowsPhone8 || this.isWindowsPhone81 || this.isWindows10)
 			datajs_filename = "data.json";
 		xhr.open("GET", datajs_filename, true);
@@ -4262,7 +4262,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 		{
 			var loaderImage = new Image();
 			loaderImage.crossOrigin = "anonymous";
-			this.setImageSrc(loaderImage, "loading-logo.png");
+			this.setImageSrc(loaderImage, "/static/loading-logo.png");
 			this.loaderlogos = {
 				logo: loaderImage
 			};
